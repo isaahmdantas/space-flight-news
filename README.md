@@ -13,7 +13,7 @@ Serviço de back-end para o Coodesh "[Back-end Challenge 2021 🏅 - Space Fligh
 - [Rspec](https://github.com/rspec/rspec-rails)
 - [Whenever](https://github.com/javan/whenever)
 - [Kaminari](https://github.com/kaminari/kaminari)
-- [PostgreSQL](https://www.postgresql.org/)
+- [MySQL](https://www.mysql.com/)
 - [Docker](https://www.docker.com/)
 - [Swagger](https://swagger.io/)
 - [Heroku](https://www.heroku.com)

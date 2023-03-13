@@ -16,6 +16,7 @@ default: &default
   username: <%= ENV['DB_USER'] || 'root' %>
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOST'] || 'localhost' %>
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -52,4 +53,4 @@ production:
 #   <<: *default
 #   database: space_flight_news_api_production
 #   username: space_flight_news_api
-#   password: <%= ENV["space_flight_news_api_DATABASE_PASSWORD"] %>
+#   password: <%= ENV["SPACE_FLIGHT_NEWS_API_DATABASE_PASSWORD"] %>
