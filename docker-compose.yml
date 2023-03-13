@@ -1,10 +1,10 @@
 version: "3.9"
 services:
   db:
-    image: postgres
+    image: mysql
     platform: linux/amd64
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data:z
+      - ./tmp/db:/var/lib/mysql/data:z
   web:
     build: .
     platform: linux/amd64
