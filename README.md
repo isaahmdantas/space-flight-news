@@ -15,9 +15,6 @@ Serviço de back-end para o Coodesh "[Back-end Challenge 2021 🏅 - Space Fligh
 - [Kaminari](https://github.com/kaminari/kaminari)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Docker](https://www.docker.com/)
-- [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-- [NodeJs](https://nodejs.org/en/)
-- [Yarn](https://yarnpkg.com/)
 - [Swagger](https://swagger.io/)
 - [Heroku](https://www.heroku.com)
 
