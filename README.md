@@ -47,10 +47,12 @@ bundle exec rspec
 
 ## Docker Instruções
 1. docker compose build
-2. docker compose run --rm web rails db:create 
-3. docker compose run --rm web rails db:migrate 
-4. docker compose run --rm web rails seed:migrate
-5. docker compose run --rm -p 3000:3000 web rails s -b 0.0.0.0
+2. docker compose run --rm app rails db:create 
+3. docker compose run --rm app rails db:migrate 
+4. docker compose run --rm app rake seed:migrate
+
+## Executar o Docker
+1. docker compose run --rm -p 3000:3000 app rails s -b 0.0.0.0
 
 ## Documentação
 
