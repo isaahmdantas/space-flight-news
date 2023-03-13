@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  db:
+    image: postgres
+    platform: linux/amd64
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data:z
+  web:
+    build: .
+    platform: linux/amd64
+    command: bash -c "bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/var/www/space-flight-news-api:z
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
