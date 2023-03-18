@@ -1,2 +1,1 @@
-web: bin/dev
-
+web: bundle exec rails server -p $PORT
