@@ -5,8 +5,8 @@ class CreateArticles < ActiveRecord::Migration[7.0]
       t.string :title
       t.string :url
       t.string :imageUrl
-      t.string :newSite
-      t.string :summary
+      t.string :newsSite
+      t.text :summary
       t.string :publishedAt
 
       t.timestamps

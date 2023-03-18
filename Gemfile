@@ -49,3 +49,8 @@ end
 gem 'whenever', require: false
 gem 'rswag'
 gem 'rspec-rails', '~> 6.0.0'
+gem 'kaminari'
+gem "paranoia", "~> 2.2"
+gem 'exception_notification'
+gem "figaro"
+

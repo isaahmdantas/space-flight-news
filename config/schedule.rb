@@ -18,3 +18,9 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+set :output, {:error => "log/cron_error_log.log", :standard => "log/cron_log.log"}
+
+every :day, at: '09:00 am' do
+    rake 'articles:write_database'
+end

@@ -34,7 +34,11 @@ $ whenever --update-crontab
 rails db:create 
 rails db:migrate 
 rails db:seed:migrte 
-bin/dev
+```
+
+## Executando o script para salvar os articles 
+```bash 
+rake articles:write_database
 ```
 
 ## Executar os testes
@@ -54,3 +58,21 @@ bundle exec rspec
 ## Documentação
 
 Para ver como interagir com os endpoints, consulte a documentação do Swagger que pode ser encontrada em ```/api-docs```.
+
+## Notificação de Erro 
+
+> Para testar em desenvolvimento só utilizar a gem ```mailcatcher``` 
+
+> Em produção é preciso ter um serviço de SMTP e adicionar as seguintes váriaveis de ambiente no arquivo (```app/config/application.yml```):
+
+```bash
+    ACTION_MAILER_HOST: 'https://space-flight-news.herokuapp.com/'
+    ACTION_MAILER_SMTP_ADDRESS: 'smtplw.com.br'
+    ACTION_MAILER_SMTP_PORT: '587'
+    ACTION_MAILER_SMTP_DOMAIN: 'space-flight-news.herokuapp.com'
+    ACTION_MAILER_SMTP_USER_NAME: 'user'
+    ACTION_MAILER_SMTP_PASSWORD: 'password'
+    ENVIRONMENT: 'DEVELOPMENT'
+    EXCEPTION_SENDER_ADDRESS: '[SPACE FLIGHT NEWS API - EXCEPTIONS] <logs@space-flight-news.herokuapp.com>'
+    EXCEPTION_RECIPIENTS: 'exceptions@space-flight-news.herokuapp.com'
+```

@@ -62,4 +62,18 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # mailcatcher
+  config.action_mailer.default_url_options = { :host => ENV['ACTION_MAILER_HOST'] }
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { address: '127.0.0.1', port: 1025, domain: '127.0.0.1' }
+ 
+  # exception notification
+  
+  config.middleware.use ExceptionNotification::Rack, :email => {
+    :email_prefix => ENV["ENVIRONMENT"],
+    :sender_address => ENV["EXCEPTION_SENDER_ADDRESS"],
+    :exception_recipients => ENV['EXCEPTION_RECIPIENTS']
+  }
 end

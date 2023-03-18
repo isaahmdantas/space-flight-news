@@ -4,14 +4,31 @@ info:
   title: API V1
   version: v1
 paths:
-  "/":
+  "/articles":
     get:
-      summary: Rota Padrão
+      summary: list articles
+      tags:
+      - Article
+      parameters:
+      - name: page
+        in: query
+        required: true
+        description: Number of page
+        example: 1
+        schema:
+          type: integer
+      - name: per_page
+        in: query
+        required: true
+        description: Number Limit of page
+        example: 10
+        schema:
+          type: integer
       responses:
         '200':
-          description: Sucesso
+          description: successfully
 servers:
-- url: https://{defaultHost}
+- url: http://0.0.0.0:3000
   variables:
     defaultHost:
-      default: www.example.com
+      default: http://0.0.0.0:3000

@@ -24,10 +24,10 @@ RSpec.configure do |config|
       paths: {},
       servers: [
         {
-          url: 'https://{defaultHost}',
+          url: ENV['ACTION_MAILER_HOST'],
           variables: {
             defaultHost: {
-              default: 'www.example.com'
+              default: ENV['ACTION_MAILER_HOST']
             }
           }
         }

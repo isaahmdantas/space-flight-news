@@ -1,0 +1,3 @@
+class ArInternalMetadata < ApplicationRecord
+
+end
