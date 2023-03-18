@@ -12,7 +12,9 @@ class ArticlesController < ApplicationController
     end
 
     # GET /articles/:id 
-    def show; end 
+    def show
+        render json: @article, status: :ok
+    end 
 
 
     # POST /articles 
